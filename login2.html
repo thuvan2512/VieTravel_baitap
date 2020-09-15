@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="REFRESH" content="1800"/>
+        <link href="image/icon.webp" rel="shortcut icon"/>
+        <title>VieTravel</title>
+        <link href="css/style1.css" rel="stylesheet"/>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script>
+          $(document).ready(function() {
+            $(window).scroll(function() {
+              if ($(this).scrollTop() > 100)
+                $("#gotop").fadeIn();
+              else 
+                $("#gotop").fadeOut();
+              });
+            $("#gotop").click(function () {
+              $("body,html").animate({scrollTop: 0}, "slow");
+              });
+            $("#aaa").click(function() {
+              $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+            });
+            $("#send").click(function() {
+              var a = $("#name").val();
+              var b = $("#phone").val();
+              var c = $("#email").val();
+              var d = $("#pw").val();
+              var e = $("#repw").val();
+              var f = $("#yn").is(":checked");
+              var g = $("#send").val();
+              if(a == "")
+                  $("#name").attr("style","border-color: red");
+              else
+                  $("#name").attr("style","border-color: lightblue");
+              if(b == "")
+                  $("#phone").attr("style","border-color: red");
+              else
+                  $("#phone").attr("style","border-color: lightblue");
+              if(c == "")
+                  $("#email").attr("style","border-color: red");
+              else
+                  $("#email").attr("style","border-color: lightblue");
+              if(d == "")
+                  $("#pw").attr("style","border-color: red");
+              else
+                  $("#pw").attr("style","border-color: lightblue");
+              if(d != e || d == "")
+                  $("#repw").attr("style","border-color: red");
+              else
+                  $("#repw").attr("style","border-color: lightblue");
+              if(f == true && d == e && d != "" && c != "" && b != "" && a != "")
+                  alert("Đăng Ký Tài Khoản Thành Công!");
+            });
+          });
+        </script>
+      </head>
+    <body title="Khám Phá Du Lịch Việt Nam">
+      <div id="gotop">
+        <img title="back to top" src="image/back-to-top-icon-png-7.jpg"/>
+      </div>
+        <header>
+          <ul class="brain">
+            <li>
+              <div id="co">
+                <img src="image/iconvn.png" alt="flag"/>
+              </div>
+              <p><a href="index.html">Trang Chủ</a>>><a href="login2.html">Đăng Ký</a></p>
+            </li>
+            <li id="tieude">
+              <h3>KHÁM PHÁ DU LỊCH VIỆT NAM</h3>
+            </li>
+            <li>
+              <ul class="login">
+                <li><a href="login1.html">Đăng Nhập</a></li>
+                <li><a href="login2.html">Đăng Ký</a><li>
+              </ul>
+            </li>
+          </ul>  
+        </header>
+        <nav class="direct">
+          <div class="logo">
+            <img src="image/iconfinder_resolutions-21_897231.png" alt="logo"/>
+          </div>
+          <ul class="menu">
+              <li><a href="index.html"><i class="fa fa-home"></i> TRANG CHỦ</a></li>
+              <li><a href= "gioithieu.html"><i class="fa fa-pencil"></i> GIỚI THIỆU</a></li>
+              <li  class="submenu"><a href="#"><i class="fa fa-bell"></i> ĐỀ XUẤT DU LỊCH <i class="fa fa-sort-down"></i></a>
+                <ul class="menu subcontent">
+                  <li><a href="index.html#tindulich">Top 5 Địa Điểm</a></li>
+                  <li><a href="index.html#tindulich">Top 5 Món Ăn</a></li>
+                  <li><a href="index.html#tindulich">Những Điều Nên Thử Khi Đến Việt Nam</a></li>
+                  <li><a href="index.html#tindulich">Mẹo Và Những Điều Cần Biết </a></li>
+                </ul>
+              </li>
+              <li  class="submenu"><a href="#"><i class="fa fa-file"></i> CÁC LOẠI HÌNH DU LỊCH <i class="fa fa-sort-down"></i></a>
+                <ul class="menu subcontent">
+                  <li><a href="index.html#loaihinhdulich">Du Lịch Nghỉ Dưỡng</a></li>
+                  <li><a href="index.html#loaihinhdulich">Du Lịch Sinh Thái</a></li>
+                  <li><a href="index.html#loaihinhdulich">Du Lịch Văn Hóa, Lịch Sử</a></li>
+                  <li><a href="index.html#loaihinhdulich">Du Lịch Khám Phá, Trải Nghiệm</a></li>
+                </ul>
+              </li>
+              <li class="submenu"><a href="#"><i class="fa fa-map-signs"></i> TOUR TRONG NƯỚC</a>
+                <ul class="menu subcontent">
+                  <li><a href="index.html#tourtrongnuoc">Miền Bắc</a></li>
+                  <li><a href="index.html#tourtrongnuoc">Miền Trung</a></li>
+                  <li><a href="index.html#tourtrongnuoc">Miền Nam</a></li>
+                  <li><a href="index.html#tourtrongnuoc">Tour Sự Kiện</a></li>
+                </ul>
+              </li>
+              <li class="submenu"><a href="#"><i class="fa fa-heart"></i> DỊCH VỤ </a>
+                <ul class="menu subcontent">
+                  <li><a href="index.html#dichvu">Vé Máy Bay</a></li>
+                  <li><a href="index.html#dichvu">Vé Tàu Xe</a></li>
+                  <li><a href="index.html#dichvu">Khách Sạn</a></li>
+                  <li><a href="index.html#dichvu">Thuê Xe Du Lịch</a></li>
+                </ul>
+              </li>
+              <li id="aaa"><a href="#contact"><i class="fa fa-id-card"></i> LIÊN HỆ</a></li>
+          </ul>
+        </nav>
+        <body>
+         <div class="content"> 
+            <div class="dangnhap">
+                <ul>
+                    <li><h4>Đăng Ký</h4></li>
+                    <li><input id="name" type="text" placeholder="Nhập Tên (*)"/></li>
+                    <li><input id="phone" type="text" placeholder="Nhập Số Điện Thoại (*)"/></li>
+                    <li><input id="email" type="text" placeholder="Email (*)"/></li>
+                    <li><input id="pw" type="password" placeholder="Nhập Mật Khẩu (*)"/></li>
+                    <li><input id="repw" type="password" placeholder="Nhập Lại Mật Khẩu (*)"/></li>
+                    <li><input id="yn" type="checkbox"/> Đồng ý với <a href="#">điều khoản</a> của chúng tôi</li>
+                    <li><input id = "send" type="submit" value="Đăng Ký"/></li>
+                </ul>
+            </div>
+         </div>
+        </body>
+        <footer>
+              <div id ="contact" class="allfoot">
+                  <div class ="col30">
+                    <h4>Liên Hệ Với Chúng Tôi</h4>
+                    <ul class="contact">
+                        <li><i class="fa fa-university"></i> Ho Chi Minh City Open University</li>
+                        <li><i class="fa fa-phone"></i> Phone: 0784301745</li>
+                        <li><i class="fa fa-envelope"></i> Email: 1951050080Thu@ou.edu.vn</li>
+                    </ul>
+                  </div>
+                  <div class="col30">
+                    <h4>Phản Hồi</h4>
+                    <textarea title="Nhập Phản Hồi Tại Đây..." name="Phan Hoi" rows="5" cols="20"></textarea>
+                    <input type="submit" value="Gửi"/>
+                  </div>
+                  <div class = "col50">
+                    <p><span style="font-weight:bold;color:brown">VieTravel</span> mang lại cho bạn có những trải nghiệm thú vị, luôn luôn lắng nghe để không ngừng nâng cao chất lượng dịch vụ của mình.<br>Hãy cùng đồng hành với <span style="font-weight:bold;color:brown">VieTravel</span> ngay nhé !</p>
+                        <div class="fb">
+                        <ul class="social">
+                           <li><a title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=100015173230798"><img src="image/iconfinder_facebook.png"/></a></li>
+                           <li><a title="youtube" target="_blank" href="https://www.youtube.com/watch?v=DIgv-e18OzA"><img src="image/iconfinder_yt.png"/></a></li>
+                           <li><a title="instagram" target="_blank" href="https://www.instagram.com/"><img src="image/iconfinder_social-instagram.png"/></a></li>
+                           <li><a title="pinterest" target="_blank" href="https://www.pinterest.com/search/pins/?q=vietnam%20travel&rs=typed&term_meta[]=vietnam%7Ctyped&term_meta[]=travel%7Ctyped"><img src="image/iconfinder_1_Pinterest.png"/></a></li>
+                       </div>
+                  </div>
+              </div>
+        </footer>
+      </body>
+      </html>

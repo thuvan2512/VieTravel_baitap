@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="REFRESH" content="1800"/>
+        <link href="image/icon.webp" rel="shortcut icon"/>
+        <title>VieTravel</title>
+        <link href="css/style1.css" rel="stylesheet"/>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+          $(document).ready(function() {
+            $(window).scroll(function() {
+              if ($(this).scrollTop() > 100)
+                $("#gotop").fadeIn();
+              else 
+                $("#gotop").fadeOut();
+              });
+            $("#gotop").click(function () {
+            $("body,html").animate({scrollTop: 0}, "slow");
+            });
+            $(".showimg img").click(function() {
+              $("#mainimg").attr("src", $(this).attr("src"));
+            });
+            $("#aaa").click(function() {
+              $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+            });
+            $(".bbb").click(function() {
+              var pos1 = $("#dichvu").offset();
+              $("html, body").animate({ scrollTop: pos1.top - 20}, "slow");
+            });
+            $(".ccc").click(function() {
+              var pos2 = $("#tourtrongnuoc").offset();
+              $("html, body").animate({ scrollTop: pos2.top - 20}, "slow");
+            });
+            $(".ddd").click(function() {
+              var pos3 = $("#loaihinhdulich").offset();
+              $("html, body").animate({ scrollTop: pos3.top - 20}, "slow");
+            });
+            $(".eee").click(function() {
+              var pos4 = $("#showtour").offset();
+              var pos5 = $("#tindulich").offset();
+              $("html, body").animate({ scrollTop: pos4.top - 20}, "slow",function(){
+                $("html, body").animate({ scrollTop: pos5.top - 20}, 2000);
+              });
+            });
+          });
+        </script>
+      </head>
+    <body title="Khám Phá Du Lịch Việt Nam">
+      <div id="gotop">
+        <img title="back to top" src="image/back-to-top-icon-png-7.jpg"/>
+      </div>
+        <header>
+          <ul class="brain">
+            <li>
+              <div id="co">
+                <img src="image/iconvn.png" alt="flag"/>
+              </div>
+              <p><a href="index.html">Trang Chủ</a></p>
+            </li>
+            <li id="tieude">
+              <h3>KHÁM PHÁ DU LỊCH VIỆT NAM</h3>
+            </li>
+            <li>
+              <ul class="login">
+                <li><a href="login1.html">Đăng Nhập</a></li>
+                <li><a href="login2.html">Đăng Ký</a><li>
+              </ul>
+            </li>
+          </ul>  
+        </header>
+        <nav class="direct">
+          <div class="logo">
+            <img src="image/iconfinder_resolutions-21_897231.png" alt="logo"/>
+          </div>
+          <ul class="menu">
+              <li><a href="index.html"><i class="fa fa-home"></i> TRANG CHỦ</a></li>
+              <li><a href= "gioithieu.html"><i class="fa fa-pencil"></i> GIỚI THIỆU</a></li>
+              <li class="submenu"><a href="#"><i class="fa fa-bell"></i> ĐỀ XUẤT DU LỊCH <i class="fa fa-sort-down"></i></a>
+                <ul class="menu subcontent">
+                  <li class="eee"><a href="#">Top 5 Địa Điểm</a></li>
+                  <li class="eee"><a href="#">Top 5 Món Ăn</a></li>
+                  <li class="eee"><a href="#">Những Điều Nên Thử Khi Đến Việt Nam</a></li>
+                  <li class="eee"><a href="#">Mẹo Và Những Điều Cần Biết </a></li>
+                </ul>
+              </li>
+              <li class="submenu"><a href="#"><i class="fa fa-file"></i> CÁC LOẠI HÌNH DU LỊCH <i class="fa fa-sort-down"></i></a>
+                <ul class="menu subcontent">
+                  <li class="ddd"><a href="#">Du Lịch Nghỉ Dưỡng</a></li>
+                  <li class="ddd"><a href="#">Du Lịch Sinh Thái</a></li>
+                  <li class="ddd"><a href="#">Du Lịch Văn Hóa, Lịch Sử</a></li>
+                  <li class="ddd"><a href="#">Du Lịch Khám Phá, Trải Nghiệm</a></li>
+                </ul>
+              </li>
+              <li class="submenu"><a href="#"><i class="fa fa-map-signs"></i> TOUR TRONG NƯỚC <i class="fa fa-sort-down"></i></a>
+                <ul class="menu subcontent">
+                  <li class="ccc"><a href="#">Miền Bắc</a></li>
+                  <li class="ccc"><a href="#">Miền Trung</a></li>
+                  <li class="ccc"><a href="#">Miền Nam</a></li>
+                  <li class="ccc"><a href="#">Tour Sự Kiện</a></li>
+                </ul>
+              </li>
+              <li class="submenu"><a href="#"><i class="fa fa-heart"></i> DỊCH VỤ <i class="fa fa-sort-down"></i></a>
+                <ul class="menu subcontent">
+                  <li class="bbb"><a href="#">Vé Máy Bay</a></li>
+                  <li class="bbb"><a href="#">Vé Tàu Xe</a></li>
+                  <li class="bbb"><a href="#">Khách Sạn</a></li>
+                  <li class="bbb"><a href="#">Thuê Xe Du Lịch</a></li>
+                </ul>
+              </li>
+              <li id="aaa"><a href="#contact"><i class="fa fa-id-card"></i> LIÊN HỆ</a></li>
+          </ul>
+        </nav>
+        <section id="hinh">
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image/ruong.jpg" alt="Ruong bac thang"/>
+                <div class="carousel-caption">
+                  <h4>Mù Cang Chải - Yên Bái</h4>
+                </div>   
+              </div>
+              <div class="carousel-item">
+                <img src="image/style-trung-khanh-cao-bang-vietnam.jpg" alt="Cao Bang"/>
+                <div class="carousel-caption">
+                  <h4>Trùng Khánh - Cao Bằng</h4>
+                </div> 
+              </div>
+              <div class="carousel-item">
+                <img src="image/ha.jpg" alt="Hoi an"/>   
+                <div class="carousel-caption"> 
+                  <h4>Phố cổ Hội An</h4>
+                </div>
+              </div>
+              
+              <!-- Left and right controls -->
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+          </div>    
+        </section>
+        <body>
+          <section class="content">
+            <div id="tim" class="search">
+              <ul>
+                <li>
+                    <p>Loại Hình Du Lịch</p>
+                    <select>
+                      <option>Du Lịch Nghỉ Dưỡng</option>\
+                      <option>Du Lịch Sinh Thái</option>
+                      <option>Văn Hóa, Lịch Sử</option>
+                      <option>Khám Phá, Trải Nghiệm</option>
+                    </select>
+                </li>
+                <li>
+                  <p>Điểm Đến</p>
+                  <select>
+                    <optgroup label="Tour Miền Bắc">
+                      <option>SaPa</option>
+                      <option>Vịnh Hạ Long</option>
+                      <option>Hà Nội</option>
+                    </optgroup>
+                    <optgroup label="Tour Miền Trung">
+                      <option>Phố Cổ Hội An</option>
+                      <option>Bãi Biển Nha Trang</option>
+                      <option>Đà Nẵng</option>
+                    </optgroup>
+                    <optgroup label="Tour Miền Nam">
+                      <option>Sài Gòn</option>
+                      <option>Mièn Tây</option>
+                      <option>Phú Quốc</option>
+                    </optgroup>
+                   <optgroup label="Tour Sự Kiện">
+                    <option>Du Lịch Tết 2021</option>
+                    <option>Tuần Trăng Mật</option>
+                  </optgroup>
+                </select>
+                </li>
+                <li>
+                  <p>Dự Trù Chi Phí</p>
+                  <select>
+                    <option>Khoảng 1 triệu(VND)</option>
+                    <option>Khoảng 1-3triệu(VND)</option>
+                    <option>Khoảng 3-7 triệu(VND)</option>
+                    <option>Trên 7 triệu(VND)</option>
+                  </select>
+               </li>
+               <li>
+                  <p>Ngày Khởi Hành</p>
+                  <input type="date"/>
+               </li>
+               <li>
+                <input type="submit" value="Tìm Kiếm"/>
+             </li>
+             </ul>
+            </div>
+          </section>
+          <section class="chinh">
+            <h4 id="dichvu">CÁC DỊCH VỤ</h4>
+            <section class="dichvu">
+              <div class="item-dv">
+                <a class="dv" href="#" title="Vé máy bay"><img src="image/iconfinder_Plane1_2315990.png" alt="Vé máy bay"></a>
+                <h5><a href="#" title="Vé máy bay">Vé máy bay</a></h5>
+                <p>Hỗ trợ book vé máy bay giá rẻ nhất. Đặt vé nhanh chóng dễ dàng</p>
+                <a class="xemdv" href="#" title="Vé máy bay">Xem thêm</a>
+               </div>
+               <div class="item-dv">
+                <a class="dv" href="#" title="Vé Tàu Xe"><img src="image/iconfinder_Cinema_ticket_2_753957.png" alt="Vé Tàu Xe"></a>
+                <h5><a href="#" title="Vé máy bay">Vé Tàu Xe</a></h5>
+                <p>Hỗ trợ mua vé tàu xe giá rẻ nhất. Đặt vé nhanh chóng dễ dàng</p>
+                <a class="xemdv" href="#" title="Vé Tàu Xe">Xem thêm</a>
+               </div>
+               <div class="item-dv">
+                <a class="dv" href="#" title="Khách Sạn"><img src="image/iconfinder_17_1757452.png" alt="Hotel"></a>
+                <h5><a href="#" title="Vé máy bay">Khách Sạn</a></h5>
+                <p>Cập nhật khách sạn mới với giá rẻ nhất, đổi trả phòng linh hoạt</p>
+                <a class="xemdv" href="#" title="Khách Sạn">Xem thêm</a>
+               </div>
+               <div class="item-dv">
+                <a class="dv" href="#" title="Vé máy bay"><img src="image/iconfinder_BT_c3front_905665.png" alt="Thuê xe"></a>
+                <h5><a href="#" title="Vé máy bay">Thuê Xe Du Lịch</a></h5>
+                <p>Dịch vụ cho thuê xe du lịch với giá thành ưu đãi, thuê tài xế, đưa đón sân bay...</p>
+                <a class="xemdv" href="#" title="Thuê Xe">Xem thêm</a>
+               </div>
+            </section>
+            <hr style="width: 200px;background-color:black;"/>
+            <h4 id="showtour">Đề Xuất</h4>
+            <div class="showtour">
+               <div class="col20">
+                <div class="showimg">
+                  <img src="image/sapa2.jpg"/>
+                </div>
+                <div class="showimg">
+                  <img src="image/sapa3.jpg"/>
+                </div>
+                <div class="showimg">
+                  <img src="image/sapa61.jpg"/>
+                </div>
+                <div class="showimg">
+                  <img src="image/sapa7.jpg"/>
+                </div>
+                <div class="showimg">
+                  <img src="image/sapa4.jpg"/>
+                </div>
+                <div class="showimg">
+                  <img src="image/sapa5.jpg"/>
+                </div>
+               </div>
+               <div class="col40">
+                <img id="mainimg" src="image/sapa1.jpg"/>
+               </div>
+               <div class="col40">
+                <h3>Du Lịch Sa Pa</h3>
+                <hr style="width: 20px;background-color:black;"/>
+                <p><li class="fa fa-calendar"></li> 5 Ngày 4 Đêm <br/><li class="fa fa-map"></li> Lào Cai - Sơn La</p>
+                <hr style="width: 200px;background-color:black;"/>
+                <ul>
+                  <li>Ưu đãi đặt xa: giảm ngay 300K/ khách</li>
+                  <li>Ưu đãi mua theo nhóm: giảm ngay 2 triệu/nhóm từ 6 khách</li>
+                </ul>
+                <h5 style="color: brown;">6,990,000vnđ/khách</h5>
+                <a href="#">
+                  <h5>ĐẶT TOUR NGAY</h5>
+                  <p>(Giữ chỗ, chưa cần thanh toán)</p></a>
+              </div>
+            </div> 
+            <hr style="width: 200px;background-color:black;"/>
+            <h4 id="tindulich">Những Điều Cần Biết</h4>
+            <div class="tour">
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/foody-upload-api-foody-mobile-1-gif-181003103019.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Top 5 Món Ăn Không Nên Bỏ Lỡ Khi Đến Việt Nam</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/mmm.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Top 5 Địa Điểm Không Nên Bỏ Lỡ Khi Đến Việt Nam</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/Thaophuongnguyen-195304025357-ha-long.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Những Điều Nên Thử Khi Đến Việt Nam</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/tips.png"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Mẹo Và Những Điều Cần Biết</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div> 
+            <a class="xemthem" href="#" title="Tips">Xem thêm >>></a>
+            <hr style="width: 200px;background-color:black;"/>
+            <h4 id="tourtrongnuoc">Tour Trong Nước</h4>
+            <div class="tour">
+              <div class="minhhoa">
+                <a href="#">
+                  <div>
+                    <img src="image/hoi-an-quang-nam-vntrip-1.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <p><li class="fa fa-calendar"></li> 3 Ngày 2 Đêm <br/><li class="fa fa-map"></li> Phố Cổ Hội An</p>
+                      <h5>3,600,000vnđ/khách</h5>
+                    </div>
+                    <div class="dattour">
+                      <a href="#">
+                        <h5>ĐẶT TOUR NGAY</h5>
+                        <p>(Giữ chỗ, chưa cần thanh toán)</p></a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="minhhoa">
+                <a href="#">
+                  <div>
+                    <img src="image/ruongbacthang.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <p><li class="fa fa-calendar"></li> 7 Ngày 6 Đêm <br/><li class="fa fa-map"></li> Lào Cai</p>
+                      <h5>11,600,000vnđ/khách</h5>
+                    </div>
+                    <div class="dattour">
+                      <a href="#">
+                        <h5>ĐẶT TOUR NGAY</h5>
+                        <p>(Giữ chỗ, chưa cần thanh toán)</p></a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="minhhoa">
+                <a href="#">
+                  <div>
+                    <img src="image/halon.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <p><li class="fa fa-calendar"></li> 4 Ngày 3 Đêm <br/><li class="fa fa-map"></li> Vịnh Hạ Long</p>
+                      <h5>5,990,000vnđ/khách</h5>
+                    </div>
+                    <div class="dattour">
+                      <a href="#">
+                        <h5>ĐẶT TOUR NGAY</h5>
+                        <p>(Giữ chỗ, chưa cần thanh toán)</p></a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="minhhoa">
+                <a href="#">
+                  <div>
+                    <img src="image/Son-Doong-Cave-Ryan-Deboodt.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <p><li class="fa fa-calendar"></li> 1 Ngày 0 Đêm <br/><li class="fa fa-map"></li> Hang Sơn Đoòng</p>
+                      <h5>4,000,000vnđ/khách</h5>
+                    </div>
+                    <div class="dattour">
+                      <a href="#">
+                        <h5>ĐẶT TOUR NGAY</h5>
+                        <p>(Giữ chỗ, chưa cần thanh toán)</p></a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div> 
+            <a class="xemthem" href="#" title="Tour Trong Nước">Xem thêm >>></a>
+            <hr style="width: 200px;background-color:black;"/>
+            <h4 id="loaihinhdulich">Loại Hình Du lịch</h4>
+            <div class="tour">
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/sinhthai.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Du Lịch Sinh Thái</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/nghi.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Du Lịch Nghỉ Dưỡng</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/líchu.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Du Lịch Văn Hóa, Lịch Sử</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="tip">
+                <a href="#">
+                  <div>
+                    <img src="image/9-diem-phuot-viet-nam-noi-tren-bao-my-mytour-10.jpg"/>
+                  </div>
+                  <div class="info">
+                    <div>
+                      <h6>Du Lịch Khám Phá, Trải Nghiệm</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div> 
+            <a class="xemthem" href="#" title="Loại Hình">Xem thêm >>></a>
+          </section> 
+        </body>
+        <footer>
+              <div id ="contact" class="allfoot">
+                  <div class ="col30">
+                    <h4>Liên Hệ Với Chúng Tôi</h4>
+                    <ul class="contact">
+                        <li><i class="fa fa-university"></i> Ho Chi Minh City Open University</li>
+                        <li><i class="fa fa-phone"></i> Phone: 0784301745</li>
+                        <li><i class="fa fa-envelope"></i> Email: 1951050080Thu@ou.edu.vn</li>
+                    </ul>
+                  </div>
+                  <div class="col30">
+                    <h4>Phản Hồi</h4>
+                    <textarea title="Nhập Phản Hồi Tại Đây..." name="Phan Hoi" rows="5" cols="20"></textarea>
+                    <input type="submit" value="Gửi"/>
+                  </div>
+                  <div class = "col50">
+                        <p><span style="font-weight:bold;color:brown">VieTravel</span> mang lại cho bạn có những trải nghiệm thú vị, luôn luôn lắng nghe để không ngừng nâng cao chất lượng dịch vụ của mình.<br>Hãy cùng đồng hành với <span style="font-weight:bold;color:brown">VieTravel</span> ngay nhé !</p>
+                        <div class="fb">
+                        <ul class="social">
+                           <li><a title="facebook" target="_blank" href="https://www.facebook.com/profile.php?id=100015173230798"><img src="image/iconfinder_facebook.png"/></a></li>
+                           <li><a title="youtube" target="_blank" href="https://www.youtube.com/watch?v=DIgv-e18OzA"><img src="image/iconfinder_yt.png"/></a></li>
+                           <li><a title="instagram" target="_blank" href="https://www.instagram.com/"><img src="image/iconfinder_social-instagram.png"/></a></li>
+                           <li><a title="pinterest" target="_blank" href="https://www.pinterest.com/search/pins/?q=vietnam%20travel&rs=typed&term_meta[]=vietnam%7Ctyped&term_meta[]=travel%7Ctyped"><img src="image/iconfinder_1_Pinterest.png"/></a></li>
+                       </div>
+                  </div>
+              </div>
+        </footer>
+    </body>
+</html>b
